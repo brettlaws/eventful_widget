@@ -61,7 +61,7 @@ class RandomColorButton extends BlocWidget<RandomColorEvent, RandomColorState> {
       : super(bloc);
 
   @override
-  StateInjectorWidget<RandomColorEvent, RandomColorState> builder(
+  StateInjectedWidget<RandomColorEvent, RandomColorState> builder(
           BuildContext context,
           RandomColorState state,
           Function(RandomColorEvent)? onEvent) =>
@@ -69,7 +69,7 @@ class RandomColorButton extends BlocWidget<RandomColorEvent, RandomColorState> {
 }
 
 class RandomColorButtonView
-    extends StateInjectorWidget<RandomColorEvent, RandomColorState> {
+    extends StateInjectedWidget<RandomColorEvent, RandomColorState> {
   RandomColorButtonView(
       RandomColorState state, Function(RandomColorEvent)? onEvent)
       : super(state, onEvent: onEvent);

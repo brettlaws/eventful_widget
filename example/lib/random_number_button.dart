@@ -52,7 +52,7 @@ class RandomNumberBloc extends Bloc<RandomNumberEvent, RandomNumberState> {
 }
 
 class RandomNumberButtonView
-    extends StateInjectorWidget<RandomNumberEvent, RandomNumberState> {
+    extends StateInjectedWidget<RandomNumberEvent, RandomNumberState> {
   RandomNumberButtonView(
       {required RandomNumberState state, Function(RandomNumberEvent)? onEvent})
       : super(state, onEvent: onEvent);
@@ -83,7 +83,7 @@ class RandomNumberButton
   RandomNumberButton(RandomNumberBloc bloc) : super(bloc);
 
   @override
-  StateInjectorWidget<RandomNumberEvent, RandomNumberState> builder(
+  StateInjectedWidget<RandomNumberEvent, RandomNumberState> builder(
           BuildContext context,
           RandomNumberState state,
           Function(RandomNumberEvent)? onEvent) =>
