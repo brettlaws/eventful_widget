@@ -1,3 +1,4 @@
+import 'package:example/random_color_button.dart';
 import 'package:example/random_number_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,7 +8,13 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RandomNumberButton(context.read<RandomNumberBloc>()),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            RandomNumberButton(context.read<RandomNumberBloc>()),
+            RandomColorButton(context.read<RandomColorBloc>()),
+          ],
+        ),
       ),
     );
   }
@@ -15,9 +22,16 @@ class Home extends StatelessWidget {
 
 void main() {
   runApp(MaterialApp(
-      home: BlocProvider(
+    home: MultiBlocProvider(
+      providers: [
+        BlocProvider(
           create: (_) => RandomNumberBloc(
               max: 1000,
               initial: RandomNumberState(active: false, value: 1000)),
-          child: Home())));
+        ),
+        BlocProvider(create: (_) => RandomColorBloc()),
+      ],
+      child: Home(),
+    ),
+  ));
 }
