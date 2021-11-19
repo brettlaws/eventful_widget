@@ -11,7 +11,7 @@ abstract class BlocWidget<E, S> extends StatelessWidget {
 
   final Bloc<E, S> bloc;
 
-  StateInjectorWidget<E, S> builder(
+  StateInjectedWidget<E, S> builder(
       BuildContext context, S state, Function(E)? onEvent);
 
   @override

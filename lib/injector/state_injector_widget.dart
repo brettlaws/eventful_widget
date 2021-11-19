@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
-abstract class StateInjectorWidget<E, S> extends StatelessWidget {
-  StateInjectorWidget(this.state, {this.onEvent, Key? key}) : super(key: key);
+abstract class StateInjectedWidget<E, S> extends StatelessWidget {
+  StateInjectedWidget(this.state, {this.onEvent, Key? key}) : super(key: key);
 
   final S state;
   final void Function(E)? onEvent;
