@@ -19,14 +19,16 @@ class RandomNumberState {
 }
 
 class RandomNumberBloc extends Bloc<RandomNumberEvent, RandomNumberState> {
-  RandomNumberBloc({this.max = 0, RandomNumberState? initial})
+  RandomNumberBloc({this.max = 1000, RandomNumberState? initial})
       : super(initial ?? RandomNumberState(active: false, value: 0)) {
     print('Created new RandomNumberBloc');
     on<RandomNumberEvent>((event, emit) {
       switch (event) {
         case RandomNumberEvent.generate:
-          emit(RandomNumberState(
-              active: state.active, value: (Random().nextInt(max)).toInt()));
+          if (state.active) {
+            emit(RandomNumberState(
+                active: state.active, value: (Random().nextInt(max)).toInt()));
+          }
           break;
         case RandomNumberEvent.activate:
           if (!state.active) {
