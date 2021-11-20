@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:bloc_widget/bloc_widget.dart';
+import 'package:eventful_widget/eventful_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -81,7 +81,7 @@ class RandomNumberButtonView
 }
 
 class RandomNumberButton
-    extends BlocWidget<RandomNumberEvent, RandomNumberState> {
+    extends EventfulWidget<RandomNumberEvent, RandomNumberState> {
   RandomNumberButton(RandomNumberBloc bloc) : super(bloc);
 
   @override

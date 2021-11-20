@@ -1,13 +1,13 @@
-library bloc_widget;
+library eventful_widget;
 
 export 'injector/state_injector_widget.dart';
 
-import 'package:bloc_widget/injector/state_injector_widget.dart';
+import 'package:eventful_widget/injector/state_injector_widget.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-abstract class BlocWidget<E, S> extends StatelessWidget {
-  BlocWidget(this.bloc);
+abstract class EventfulWidget<E, S> extends StatelessWidget {
+  EventfulWidget(this.bloc);
 
   final Bloc<E, S> bloc;
 

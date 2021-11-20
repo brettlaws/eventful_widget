@@ -1,11 +1,11 @@
-# bloc_widget
+# eventful_widget
 
   
 
 A Flutter package that uses bloc to encourage separation of logic from looks.
 
 # About
-This package provides two useful abstract widgets -- <b>BlocWidget</b> and <b>StateInjectedWidget</b>.  Extending these classes allows for simple and clean state management.  Proper use of this package will give you a clear path to easily test business logic components as well as UI components.
+This package provides two useful abstract widgets -- <b>EventfulWidget</b> and <b>StateInjectedWidget</b>.  Extending these classes allows for simple and clean state management.  Proper use of this package will give you a clear path to easily test business logic components as well as UI components.
   
 
 # Usage
@@ -51,12 +51,12 @@ class  CoolBloc  extends  Bloc<CoolEvent, CoolState> {
 }
 ```  
 
-Next, create a widget which will use your new bloc and delegate drawing by extending <b>BlocWidget</b> and implementing <b>builder</b>.
+Next, create a widget which will use your new bloc and delegate drawing by extending <b>EventfulWidget</b> and implementing <b>builder</b>.
 
   
 
 ```dart
-class  CoolWidget  extends  BlocWidget<CoolEvent, CoolState> {
+class  CoolWidget  extends  EventfulWidget<CoolEvent, CoolState> {
 	CoolWidget(Bloc<CoolEvent, CoolState> bloc) : super(bloc);
 	
 	@override

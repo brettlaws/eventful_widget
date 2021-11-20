@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  bloc_widget:
+  eventful_widget:
     path: ../
   flutter_bloc: ^8.0.0
   bloc_test: ^9.0.1

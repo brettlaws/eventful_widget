@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:bloc_widget/bloc_widget.dart';
+import 'package:eventful_widget/eventful_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -56,7 +56,8 @@ class RandomColorBloc extends Bloc<RandomColorEvent, RandomColorState> {
   Timer? timer;
 }
 
-class RandomColorButton extends BlocWidget<RandomColorEvent, RandomColorState> {
+class RandomColorButton
+    extends EventfulWidget<RandomColorEvent, RandomColorState> {
   RandomColorButton(Bloc<RandomColorEvent, RandomColorState> bloc)
       : super(bloc);
 

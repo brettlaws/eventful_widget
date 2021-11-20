@@ -5,12 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "bloc_widget",
+            "name": "eventful_widget",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "bloc_widget (profile mode)",
+            "name": "eventful_widget (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
