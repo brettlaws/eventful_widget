@@ -1,10 +1,11 @@
-
 # bloc_widget
 
   
 
 A Flutter package that uses bloc to encourage separation of logic from looks.
 
+# About
+This package provides two useful abstract widgets -- <b>BlocWidget</b> and <b>StateInjectedWidget</b>.  Extending these classes allows for simple and clean state management.  Proper use of this package will give you a clear path to easily test business logic components as well as UI components.
   
 
 # Usage
